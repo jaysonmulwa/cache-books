@@ -4,14 +4,20 @@ export class Organization {
    
    private orgId: number = 0;
    private orgName: string = "";
-   private createDt: string = "";
+   private createDt: any = "" ;
 
    constructor(orgName: string) {
       this.orgName = orgName;
    }
 
    public create() :any {
-        return {};
+        this.orgId = Date.now();
+        this.createDt = new Date("yyyy-mm-dd");
+        return {
+            "orgId": this.orgId,
+            "orgName": this.orgName,
+            "createDt": this.createDt
+        };
    }
 
    public edit(orgName: string) :number {
@@ -20,5 +26,9 @@ export class Organization {
 
    public search(orgName: string) :any {
         return;
+   }
+
+   private hasAnotherOrg() :boolean {
+        return true;
    }
 }
