@@ -1,6 +1,6 @@
 import { organization } from "../types/organization";
 
-class Organization {
+export class Organization {
    
    private orgId: number = 0;
    private orgName: string = "";
@@ -10,16 +10,12 @@ class Organization {
       this.orgName = orgName;
    }
 
-   public create(orgName: string) :any {
-    
+   public create() :any {
+        return {};
    }
 
-   public delete(orgId: string) :any {
-    
-   }
-
-   public edit(orgName: string) :any {
-
+   public edit(orgName: string) :number {
+        return this.orgId;
    }
 
    public search(orgName: string) :any {
