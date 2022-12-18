@@ -1,5 +1,5 @@
 export type organization = {
-    orgId: Number;
-    orgName: String; 
-    createDt: String;
+    orgId: number;
+    orgName: string; 
+    createDt: string;
 }
